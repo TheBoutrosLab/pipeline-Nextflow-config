@@ -39,6 +39,8 @@ To use a common `methods` function:
 - `setup_docker_cpus` - Function to use allocated CPUs for a process to specify number of CPUs rather than CPU shares with Docker
 - `get_absolute_path` - Function to resolve a path relative to the currently-loading configuration file into an absolute path
 - `sanitize_uclahs_cds_id` - Pass input string to sanitize, i.e. keeping only alphanumeric, `-`, `/`, and `.` characters and replacing `_` with `-`
+- `set_apptainer_cache_and_library` - Set Apptainer cache and library directories if provided as parameters using `params.apptainer_cache` and `params.apptainer_library`
+- `configure_containerization` - Set up cotnainerization parameters based on which containerization system is selected
 
 ## Example
 
@@ -219,6 +221,15 @@ process xxx {
 
 Due to the [Elvis operator](https://groovy-lang.org/operators.html#_elvis_operator), the above snippet is safe to use even if `methods.setup_process_afterscript()` is not used.
 
+### Configure containerization
+```Nextflow
+includeConfig "/path/to/common_methods.config"
+...
+methods {
+    ...
+    methods.configure_containerization()
+}
+```
 
 ## References
 1. `nf-core` - https://nf-co.re/
