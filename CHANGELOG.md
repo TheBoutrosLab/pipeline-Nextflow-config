@@ -13,6 +13,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Changed
 - Change `setup_docker_cpus` method to properly incorporate containerOptions set at process level
+- Fall back to loading `default` tag resource profile if given or system-inferred tag fails to load
 
 
 ---
