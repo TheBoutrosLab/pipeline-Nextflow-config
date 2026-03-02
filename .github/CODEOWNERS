@@ -1,4 +1,2 @@
-# Test CODEOWNERS
-
 # Default owner(s)
-*	@TheBoutrosLab/nextflow-wg
+*  @TheBoutrosLab/nextflow-wg
