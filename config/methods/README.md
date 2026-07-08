@@ -40,7 +40,8 @@ To use a common `methods` function:
 - `get_absolute_path` - Function to resolve a path relative to the currently-loading configuration file into an absolute path
 - `sanitize_uclahs_cds_id` - Pass input string to sanitize, i.e. keeping only alphanumeric, `-`, `/`, and `.` characters and replacing `_` with `-`
 - `set_apptainer_cache_and_library` - Set Apptainer cache and library directories if provided as parameters using `params.apptainer_cache` and `params.apptainer_library`
-- `configure_containerization` - Set up cotnainerization parameters based on which containerization system is selected
+- `set_singularity_cache_and_library` - Set Singularity cache and library directories if provided as parameters using `params.singularity_cache` and `params.singularity_library`
+- `configure_containerization` - Set up Docker, Apptainer, or Singularity parameters based on which containerization system is selected
 
 ## Example
 
