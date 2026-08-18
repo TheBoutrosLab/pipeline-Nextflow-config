@@ -17,7 +17,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Fixed
 - Update assertions into Exceptions to prevent runtime assertion disabling causing failures
-- Parse full CSV line including trailing empty collumns
+- Parse full CSV line including trailing empty columns
 
 ---
 
