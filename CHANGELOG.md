@@ -16,6 +16,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - Fall back to loading `default` tag resource profile if given or system-inferred tag fails to load
 
 ### Fixed
+- Resolve task-dependent `ext.containerOptions` closures for Docker, Singularity, and Apptainer
 - Update assertions into Exceptions to prevent runtime assertion disabling causing failures
 - Parse full CSV line including trailing empty columns
 
