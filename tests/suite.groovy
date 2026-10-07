@@ -1,6 +1,8 @@
 // https://stackoverflow.com/a/4115972
 import org.junit.runner.JUnitCore
 
+evaluate(new File('container_options.groovy'))
+
 result = JUnitCore.runClasses \
     ExampleTests, \
     SetEnvTests, \
