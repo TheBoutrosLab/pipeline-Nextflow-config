@@ -14,6 +14,8 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 ### Changed
 - Change `setup_docker_cpus` method to properly incorporate containerOptions set at process level
 - Fall back to loading `default` tag resource profile if given or system-inferred tag fails to load
+- Support Nextflow 25.10.5 by importing `ConfigBase` from its new `nextflow.config.parser.v1` package; Nextflow 25.04 or later is now required
+- Update test harness for Nextflow 25.10.5: run tests through `GroovyMain` against the Nextflow jar, use Groovy 4 test dependencies, and pin the legacy config parser
 
 ### Fixed
 - Resolve task-dependent `ext.containerOptions` closures for Docker, Singularity, and Apptainer
