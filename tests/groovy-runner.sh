@@ -35,6 +35,8 @@ JAVA_OPTS=(
     --add-opens=java.base/java.util.regex=ALL-UNNAMED
 )
 
+# The working directory goes first so Groovy can resolve test classes (e.g.
+# ExampleTests, validator.bl.*) from their .groovy sources by class name
 exec "${JAVA_CMD:-java}" "${JAVA_OPTS[@]}" \
-    -cp "${NEXTFLOW_JAR}:${TEST_JARS_DIR}/*" \
+    -cp ".:${NEXTFLOW_JAR}:${TEST_JARS_DIR}/*" \
     groovy.ui.GroovyMain "$@"
