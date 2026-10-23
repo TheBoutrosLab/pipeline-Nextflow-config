@@ -36,6 +36,5 @@ jobs:
             --rm \
             -v ${{ github.workspace}}:/pipeline \
             -w /pipeline/tests \
-            --entrypoint nextflow \
             configtest:${{ github.sha }} \
             suite.groovy

@@ -6,9 +6,17 @@
   <version>1</version>
   <dependencies>
     <dependency>
-      <groupId>org.codehaus.groovy</groupId>
+      <groupId>org.apache.groovy</groupId>
       <artifactId>groovy-test</artifactId>
-      <version>3.0.19</version>
+      <!-- Keep in step with the Groovy version bundled in the Nextflow jar -->
+      <version>4.0.28</version>
+      <exclusions>
+        <!-- Groovy itself is provided by the Nextflow jar -->
+        <exclusion>
+          <groupId>org.apache.groovy</groupId>
+          <artifactId>groovy</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>com.github.stefanbirkner</groupId>

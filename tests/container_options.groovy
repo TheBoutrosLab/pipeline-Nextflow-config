@@ -1,11 +1,11 @@
-import nextflow.config.ConfigParser
+import nextflow.config.ConfigParserFactory
 import nextflow.processor.TaskConfig
 
 // Exercise Nextflow's actual task-context resolution, not a plain Map mock.
 def projectDir = new File(getClass().protectionDomain.codeSource.location.path).parentFile.parentFile
 def checks = 0
 ['docker', 'apptainer', 'singularity'].each { engine ->
-    def config = new ConfigParser().setBinding([projectDir: projectDir.toPath()]).parse("""
+    def config = ConfigParserFactory.create().setBinding([projectDir: projectDir.toPath()]).parse("""
         includeConfig "\${projectDir}/config/methods/common_methods.config"
         ${engine}.enabled = true
         methods.configure_containerization()
