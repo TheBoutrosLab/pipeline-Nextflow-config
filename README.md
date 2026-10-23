@@ -17,6 +17,10 @@ A set of Nextflow configs commonly used across pipelines.
 1. Add this repository as a submodule in the pipeline of interest
 2. Include the required config files and call necessary functions
 
+### Nextflow version
+
+These configs require Nextflow 25.04 or later (targeting 25.10.5) and the legacy (v1) config parser. The legacy parser is the default up to Nextflow 25.10. From 26.04 onward, set `NXF_SYNTAX_PARSER=v1` in the launch environment.
+
 ## Available Configs
 
 |Module|Description|
