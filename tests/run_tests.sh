@@ -24,6 +24,5 @@ docker run \
     --rm \
     -v "$REPO_DIR":/pipeline \
     -w /pipeline/tests \
-    --entrypoint nextflow \
     "$IMAGE" \
     suite.groovy
