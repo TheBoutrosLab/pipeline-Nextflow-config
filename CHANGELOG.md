@@ -12,6 +12,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - Add containerization setup for Docker, Singularity, and Apptainer
 
 ### Changed
+- Update to support Nextflow v25.10.5
 - Change `setup_docker_cpus` method to properly incorporate containerOptions set at process level
 - Fall back to loading `default` tag resource profile if given or system-inferred tag fails to load
 - Support Nextflow 25.10.5 by importing `ConfigBase` from its new `nextflow.config.parser.v1` package; Nextflow 25.04 or later is now required
