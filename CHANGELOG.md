@@ -17,6 +17,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - Fall back to loading `default` tag resource profile if given or system-inferred tag fails to load
 - Support Nextflow 25.10.5 by importing `ConfigBase` from its new `nextflow.config.parser.v1` package; Nextflow 25.04 or later is now required
 - Update test harness for Nextflow 25.10.5: run tests through `GroovyMain` against the Nextflow jar, use Groovy 4 test dependencies, and pin the legacy config parser
+- Disable `ociAutoPull` for Singularity and Apptainer when a cache or library directory is provided, so images are resolved from `libraryDir`, then `cacheDir`, before pulling
 
 ### Fixed
 - Resolve task-dependent `ext.containerOptions` closures for Docker, Singularity, and Apptainer
